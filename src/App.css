@@ -1,5 +1,5 @@
 .main {
-    background-image: url("./assets/dice-background.jpg");
+    background-image: url("/public/assets/dice-background.jpg");
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
