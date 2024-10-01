@@ -195,7 +195,7 @@ function App() {
           </div>
 
           <div className='flex justify-center '>
-            <button onClick={rollDice} disabled={disable} className='roll-btn'>Roll</button>
+            <button onClick={rollDice} disabled={disable} className='roll-btn'>oll</button>
           </div>
 
           <div className='flex justify-center my-10'>
