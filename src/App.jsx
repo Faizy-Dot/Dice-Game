@@ -121,7 +121,7 @@ function App() {
             <h1 className='my-10 px-5'><span className='text-xl font-bold '>Rules :</span>  select number in the given below box and roll the dice if dices numbers and box number is same than count score plus with big digit number else count minus score with big digit number ,if both dices have same number you got the +10 bonus points . if score is less than 0 than you lose and if score is greater than 50 than you win so let's play . </h1>
 
           </div>
-          <div className='flex justify-center px-2 my-20 gap-1'>
+          <div className='flex justify-center px-2 my-10 gap-1'>
             {
               diceObj.map((data) => {
                 return (
@@ -163,7 +163,7 @@ function App() {
             <h1 className='m-10 text-xl font-bold'>Score : {score}</h1>
           </div>
 
-          <div className='flex justify-center my-5 text-4xl font-bold'>
+          <div className='flex justify-center  text-4xl font-bold'>
             {
               youWin ? <h1>You Win</h1>
                 :
@@ -171,7 +171,7 @@ function App() {
             }
           </div>
 
-          <div className='flex justify-center my-12 relative top-6 gap-3 '>
+          <div className='flex justify-center my-6  gap-3 '>
 
             {dicing ?
               <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={100} />
@@ -198,7 +198,7 @@ function App() {
             <button onClick={rollDice} disabled={disable} className='roll-btn'>Roll</button>
           </div>
 
-          <div className='flex justify-center my-10'>
+          <div className='flex justify-center my-3'>
             {
               disable ?
                 <button onClick={restart} className='restart-btn'>{youWin ? "Restart" : "Try Again"}</button>
