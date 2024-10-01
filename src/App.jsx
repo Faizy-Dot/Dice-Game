@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const diceObj = [{ number: 1, image: "dice-1.jpg" }, { number: 2, image: "dice-2.jpg" }, { number: 3, image: "dice-3.jpg" }, { number: 4, image: "dice-4.jpg" }, { number: 5, image: "dice-5.jpg" }, { number: 6, image: "dice-6.jpg" }]
+const diceObj = [{ number: 1, image: "/assets/dice-1.jpg" }, { number: 2, image: "/assets/dice-2.jpg" }, { number: 3, image: "/assets/dice-3.jpg" }, { number: 4, image: "/assets/dice-4.jpg" }, { number: 5, image: "/assets/dice-5.jpg" }, { number: 6, image: "/assets/dice-6.jpg" }]
 
 
 
@@ -97,23 +97,24 @@ function App() {
 
   }, [rollDice])
 
-const restart = ()=>{
-  setScore(0)
-  setDisable(false)
-  setFirstNumber(6)
-  setSecondNumber(6)
-  setSelectDice(1)
-  setYouWin(false)
-  setYouLose(false)
-  setScoreMinus(false)
-  setScorePlus(false)
-  setScoreBonus(true)
-}
+  const restart = () => {
+    setScore(0)
+    setDisable(false)
+    setFirstNumber(6)
+    setSecondNumber(6)
+    setSelectDice(1)
+    setYouWin(false)
+    setYouLose(false)
+    setScoreMinus(false)
+    setScorePlus(false)
+    setScoreBonus(true)
+  }
 
   return (
     <>
       <div className='main'>
         <div className='semi-main'>
+
           <div >
 
             <h1 className='text-center text-4xl relative top-2'>Dice Game</h1>
@@ -133,15 +134,15 @@ const restart = ()=>{
           {
             scorePlus ?
               <div className='emoji'>
-                <img src="score+.gif" alt="" />
+                <img src="/assets/score+.gif" alt="" />
               </div>
               : scoreMinus ?
                 <div className='emoji'>
-                  <img src="score-.gif" alt="" />
+                  <img src="/assets/score-.gif" alt="" />
                 </div>
                 : scoreBonus &&
                 <div className='emoji'>
-                  <img src="bonus.gif" alt="" />
+                  <img src="/assets/bonus.gif" alt="" />
                 </div>
 
           }
@@ -165,15 +166,15 @@ const restart = ()=>{
           <div className='flex justify-center my-5 text-4xl font-bold'>
             {
               youWin ? <h1>You Win</h1>
-              :
-              youLose ? <h1>You Lose</h1> : null
+                :
+                youLose ? <h1>You Lose</h1> : null
             }
           </div>
 
           <div className='flex justify-center my-12 relative top-6 gap-3 '>
 
             {dicing ?
-              <img src="rolling-dice.gif" alt="" className='rounded-xl' width={100} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={100} />
               :
               diceObj.map((data) => {
                 return (
@@ -183,7 +184,7 @@ const restart = ()=>{
             }
 
             {dicing ?
-              <img src="rolling-dice.gif" alt="" className='rounded-xl' width={100} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={100} />
               :
               diceObj.map((data) => {
                 return (
@@ -196,12 +197,12 @@ const restart = ()=>{
           <div className='flex justify-center '>
             <button onClick={rollDice} disabled={disable} className='roll-btn'>Roll</button>
           </div>
-          
+
           <div className='flex justify-center my-10'>
             {
-              disable ? 
-              <button  onClick={restart}  className='restart-btn'>{youWin ? "Restart" : "Try Again"}</button> 
-            :null
+              disable ?
+                <button onClick={restart} className='restart-btn'>{youWin ? "Restart" : "Try Again"}</button>
+                : null
             }
           </div>
 
