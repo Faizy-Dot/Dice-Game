@@ -148,7 +148,7 @@ function App() {
           }
 
           <div className='selected-dice'>
-            <h1 className='absolute bottom-36 right-3 font-bold'>Selected Dice</h1>
+            <h1 className='absolute  bottom-16 right-2 font-bold text-nowrap'>Selected Dice</h1>
             {
               diceObj.map((data) => {
                 return (
@@ -174,21 +174,21 @@ function App() {
           <div className='flex justify-center my-6  gap-3 '>
 
             {dicing ?
-              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={100} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={40} />
               :
               diceObj.map((data) => {
                 return (
-                  firstNumber == data.number && <img src={data.image} alt="" key={data.number} className='rounded-xl' />
+                  firstNumber == data.number && <img src={data.image} alt="" key={data.number} className='rounded-xl box' />
                 )
               })
             }
 
             {dicing ?
-              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={100} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={40} />
               :
               diceObj.map((data) => {
                 return (
-                  secondNumber == data.number && <img src={data.image} alt="" key={data.number} className='rounded-xl' />
+                  secondNumber == data.number && <img src={data.image} alt="" key={data.number} className='rounded-xl box' />
                 )
               })
             }
