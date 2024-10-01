@@ -14,11 +14,13 @@
     backdrop-filter: blur(3px);
     color: white;
     text-shadow: 1px 1px 3px rgb(29, 27, 27);
+    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .box {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -65,11 +67,14 @@
 .selected-dice {
     border: 1px solid white;
     max-width: fit-content;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     position: absolute;
     right: 10px;
+}
 
+.selected-dice>img{
+    width: 40px;
 }
 
 .emoji {
@@ -79,7 +84,7 @@
 }
 
 .emoji>img {
-    width: 100px;
+    width: 70px;
     border-radius: 50%;
 }
 
