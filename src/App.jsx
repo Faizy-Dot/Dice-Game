@@ -140,10 +140,15 @@ function App() {
                 <div className='emoji'>
                   <img src="/assets/score-.gif" alt="" />
                 </div>
-                : scoreBonus &&
+                : scoreBonus ?
                 <div className='emoji'>
                   <img src="/assets/bonus.gif" alt="" />
                 </div>
+                :
+                <div className='emoji'>
+                  <h1><img src="/assets/loader.webp" width={60} alt="" /></h1>
+                </div>
+
 
           }
 
@@ -174,7 +179,7 @@ function App() {
           <div className='flex justify-center  gap-3 '>
 
             {dicing ?
-              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={40} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={42} />
               :
               diceObj.map((data) => {
                 return (
@@ -184,7 +189,7 @@ function App() {
             }
 
             {dicing ?
-              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={40} />
+              <img src="/assets/rolling-dice.gif" alt="" className='rounded-xl' width={42} />
               :
               diceObj.map((data) => {
                 return (
@@ -199,11 +204,10 @@ function App() {
           </div>
 
           <div className='flex justify-center my-3'>
-            {
-              disable ?
-                <button onClick={restart} className='restart-btn'>{youWin ? "Restart" : "Try Again"}</button>
-                : null
-            }
+            
+                <button onClick={restart} className='restart-btn'>{disable && youLose ? "Try Again" : "Restart"}</button>
+                
+            
           </div>
 
           <div className='m-5 font-bold'>
@@ -217,4 +221,3 @@ function App() {
 }
 
 export default App
-
