@@ -121,7 +121,7 @@ function App() {
             <h1 className='my-10 px-5'><span className='text-xl font-bold '>Rules :</span>  select number in the given below box and roll the dice if dices numbers and box number is same than count score plus with big digit number else count minus score with big digit number ,if both dices have same number you got the +10 bonus points . if score is less than 0 than you lose and if score is greater than 50 than you win so let's play . </h1>
 
           </div>
-          <div className='flex justify-center px-2 my-10 gap-1'>
+          <div className='flex justify-center px-2 gap-1'>
             {
               diceObj.map((data) => {
                 return (
